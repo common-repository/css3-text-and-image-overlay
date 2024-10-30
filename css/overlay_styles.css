@@ -1,0 +1,64 @@
+/*
+Item Name : Josh Chernoff - GFX Complex
+Author URI : http://gfxcomplex.com/
+Version : 1.0.1
+*/
+
+/*
+This is based off of: HoverMe - Collection of CSS3 Hover Effects
+Author URI : http://themeforest.net/user/Keliah
+Version : 1.0
+*/
+
+/*
+Thanks To:
+Roger Cyr
+*/
+
+.full_overlay {
+	color:white !important;
+	position:relative;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    float:left;
+}
+
+.full_overlay .overlay_content {
+	position: absolute;
+    top:0;
+    left:0;
+    min-height: 100%;
+    min-width:100%;
+	
+    display:block;
+	
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	
+    /* Semi-transparent background for modern browsers, black for older browsers */
+    background:#000000;
+    background: rgba(0,0,0,0.8);
+	
+    /* CSS3 transitions, creates the fading effect */
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+     -o-transition: opacity 0.4s ease-in-out;
+     transition: opacity 0.4s ease-in-out;
+}
+.full_overlay:hover .overlay_content {
+	filter: alpha(opacity=100);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.overlay_content h1, .overlay_content h2, .overlay_content h3, .overlay_content p{
+		padding:0 10px !important;
+		color:#ffffff !important;
+}
+.overlay_content a {
+	color:#cccccc !important;
+}
+
+
+
